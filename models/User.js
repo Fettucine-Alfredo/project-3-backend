@@ -15,4 +15,4 @@ const userSchema = new mongoose.Schema(
 
 
 
-module.exports = User
+module.exports = userSchema
