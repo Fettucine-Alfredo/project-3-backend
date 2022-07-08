@@ -32,8 +32,8 @@ app.get('/', (req, res) => {
 /* START CONTROLLERS HERE */
 
 // Example
-// const bookmarksController = require('./controllers/bookmarksController');
-// app.use('/api/bookmarks/', bookmarksController);
+const jobsController = require('./controllers/jobs');
+app.use('/api/bookmarks/', jobsController);
 
 /* END CONTROLLERS HERE */
 
