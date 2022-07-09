@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 
 // Example
 const jobsController = require('./controllers/jobs');
-app.use('/api/user', jobsController);
+app.use('/api', jobsController);
 
 /* END CONTROLLERS HERE */
 
