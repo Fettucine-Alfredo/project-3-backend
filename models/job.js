@@ -1,8 +1,5 @@
 const mongoose = require('../db/connection');
 
-// import User schema
-const userSchema = require('./user');
-
 const jobSchema = new mongoose.Schema(
 	{
 		title: { type: String, required: true },
@@ -21,11 +18,8 @@ const jobSchema = new mongoose.Schema(
 				phone: String,
 			},
 		],
-		owner: userSchema,
 	},
 	{ timestamps: true }
 );
 
-const Job = mongoose.model('Job', jobSchema);
-
-module.exports = Job;
+module.exports = jobSchema;
