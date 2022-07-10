@@ -34,7 +34,6 @@ app.get('/', (req, res) => {
 // Example
 const jobsController = require('./controllers/jobs');
 app.use('/api/user', jobsController);
-
 /* END CONTROLLERS HERE */
 
 // Error handling middleware

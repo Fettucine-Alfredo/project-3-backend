@@ -11,6 +11,21 @@ router.get('/:username', (req, res, next) => {
 		.catch(next);
 });
 
+// POST /api/user/
+// Create a new user
+router.post('/', async (req, res, next) => {
+	try {
+		const user = await User.create(req.body);
+		if (user) {
+			return res.json(user);
+		} else {
+			return res.sendStatus(400);
+		}
+	} catch (error) {
+		next(error);
+	}
+});
+
 // GET (show) /api/user/:username/jobs/:id
 // Show individual job by ID
 router.get('/:username/jobs/:id', async (req, res, next) => {
@@ -37,18 +52,16 @@ router.post('/:username/jobs', (req, res, next) => {
 		.catch(next);
 });
 
-// PATCH (update) /api/user/:username/jobs/id
-router.patch('/:username:/jobs/:id', async (req, res, next) => {
-	try {
-		// find the document being requested
-		const user = await User.findOne({ username: req.params.username });
-		const job = await user.jobs.id(req.params.id);
-		job.set(req.body);
-		const upDatedJob = job.save();
-		return res.json(upDatedJob);
-	} catch (error) {
-		next(error);
-	}
+// P (update) /api/user/:username/jobs/id
+router.patch('/:username/jobs/:id', (req, res, next) => {
+	User.findOne({ username: req.params.username })
+		.then((user) => {
+			const job = user.jobs.id(req.params.id);
+			job.set(req.body);
+			return user.save();
+		})
+		.then((user) => res.json(user))
+		.catch(next);
 });
 
 // DELETE (delete) /api/user/:username/jobs/:id
