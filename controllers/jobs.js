@@ -15,7 +15,10 @@ router.get('/:username', (req, res, next) => {
 // Show individual job by ID
 router.get('/:username/jobs/:id', async (req, res, next) => {
 	try {
-		const user = await User.findOne({ 'jobs.__id': req.params.id });
+		const user = await User.findOne({
+			username: req.params.username,
+			'jobs.__id': req.params.id,
+		});
 		const job = user.jobs.id(req.params.id);
 		return res.json(job);
 	} catch (error) {
@@ -35,7 +38,7 @@ router.post('/:username/jobs', (req, res, next) => {
 });
 
 // PATCH (update) /api/user/:username/jobs/id
-router.put('/:username:/jobs/:id', async (req, res, next) => {
+router.patch('/:username:/jobs/:id', async (req, res, next) => {
 	try {
 		// find the document being requested
 		const user = await User.findOne({ username: req.params.username });
