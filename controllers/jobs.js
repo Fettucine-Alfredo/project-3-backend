@@ -52,7 +52,7 @@ router.post('/:username/jobs', (req, res, next) => {
 		.catch(next);
 });
 
-// P (update) /api/user/:username/jobs/id
+// PATCH (update) /api/user/:username/jobs/id
 router.patch('/:username/jobs/:id', (req, res, next) => {
 	User.findOne({ username: req.params.username })
 		.then((user) => {
