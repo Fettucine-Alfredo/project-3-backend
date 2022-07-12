@@ -1,26 +1,7 @@
 const mongoose = require('./connection');
 
 const User = require('../models/user');
-//const jobseeds = require('./seeds.json');
-
-const fakeJob = {
-	title: 'Fake Job',
-	url: 'https://fakejob.com',
-	company: {
-		name: 'Fake INC',
-	},
-	skills: ['CSS', 'React', 'Express'],
-	contacts: [
-		{
-			name: 'Bob',
-			email: 'bob@fakeinc.com',
-		},
-		{
-			name: 'Linda',
-			email: 'linda@fakeinc.com',
-		},
-	],
-};
+const jobseed = require('./jobs.json');
 
 User.deleteMany({})
 	.then(() => {
@@ -31,7 +12,19 @@ User.deleteMany({})
 		});
 	})
 	.then((user) => {
-		user.jobs.push(fakeJob);
+		user.jobs.push(jobseed[0]);
+		return user.save();
+	})
+	.then((user) => {
+		user.jobs.push(jobseed[1]);
+		return user.save();
+	})
+	.then((user) => {
+		user.jobs.push(jobseed[2]);
+		return user.save();
+	})
+	.then((user) => {
+		user.jobs.push(jobseed[3]);
 		return user.save();
 	})
 	.then(console.log)
