@@ -36,12 +36,10 @@ const jobsController = require('./controllers/jobs');
 app.use('/api/user', jobsController);
 /* END CONTROLLERS HERE */
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-	const statusCode = res.statusCode || 500;
-	const message = err.message || 'Internal Server Error';
-	res.status(statusCode).send(message);
-});
+// if in the controller, the .catch is thrown and next is invoked, it'll come back here
+const { handleErrors } = require('./middleware/custom_errors');
+app.use(handleErrors);
+
 //=============================================================================
 // START SERVER
 //=============================================================================
