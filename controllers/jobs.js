@@ -88,7 +88,7 @@ router.delete('/:username/jobs/:id', (req, res, next) => {
 				return user.save();
 			}
 		})
-		.then(() => res.sendStatus(204))
+		.then((user) => res.json(user))
 		.catch(next);
 });
 
