@@ -11,13 +11,11 @@ const jobSchema = new mongoose.Schema(
 		},
 		currentStep: String,
 		skills: [String],
-		contacts: [
-			{
-				name: String,
-				email: String,
-				phone: String,
-			},
-		],
+		contacts: {
+			name: String,
+			email: String,
+			phone: String,
+		},
 	},
 	{ timestamps: true }
 );
