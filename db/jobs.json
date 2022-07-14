@@ -5,6 +5,7 @@
 		},
 		"title": "Fake Job",
 		"url": "https://fakejob.com",
+		"currentStep": "Interested",
 		"skills": [
 			"CSS",
 			"HTML",
@@ -14,16 +15,10 @@
 			"Python",
 			"Express"
 		],
-		"contacts": [
-			{
-				"name": "Bob",
-				"email": "bob@fakeinc.com"
-			},
-			{
-				"name": "Linda",
-				"email": "linda@fakeinc.com"
-			}
-		]
+		"contacts": {
+			"name": "Bob",
+			"email": "bob@fakeinc.com"
+		}
 	},
 	{
 		"company": {
@@ -31,13 +26,12 @@
 		},
 		"title": "Senior Software Engineer",
 		"url": "https://google.com",
+		"currentStep": "Application sent",
 		"skills": ["Node", "React", "Express", "MondoDB"],
-		"contacts": [
-			{
-				"name": "Bill",
-				"email": "BillGates@microsoft.com"
-			}
-		]
+		"contacts": {
+			"name": "Bill",
+			"email": "BillGates@microsoft.com"
+		}
 	},
 	{
 		"company": {
@@ -46,17 +40,12 @@
 		"title": "Junior FrontEnd Developer",
 		"url": "https://facebook.com",
 		"description": "We're looking for a junior developer that has 500 years of experience in JavaScript, React, React Redux, Gatsby, Express, MongoDB, Mongoose, Python, C++, C#, HTML, CSS, and every other framework/library ever written",
+		"currentStep": "Phone Screening",
 		"skills": ["Node", "React", "Express", "MondoDB"],
-		"contacts": [
-			{
-				"name": "Mark Zuckerburger",
-				"email": "mark@facebook.com"
-			},
-			{
-				"name": "Steve",
-				"email": "steve@facebook.com"
-			}
-		]
+		"contacts": {
+			"name": "Mark Zuckerburger",
+			"email": "mark@facebook.com"
+		}
 	},
 	{
 		"company": {
@@ -65,16 +54,11 @@
 		"title": "Backend Engineer",
 		"url": "https://amazon.com",
 		"description": "Work with the best of the best. We want a dedicated employee that will commit all their time to our projects. This means you might have to pee in a bottle at your desk.",
+		"currentStep": "2nd Round of interviews",
 		"skills": ["React", "Node", "Express", "MongoDB", "Mongoose"],
-		"contacts": [
-			{
-				"name": "Jeff Bezos",
-				"email": "Jeff@amazon.com"
-			},
-			{
-				"name": "Doloris",
-				"email": "Doloris@amazon.com"
-			}
-		]
+		"contacts": {
+			"name": "Jeff Bezos",
+			"email": "Jeff@amazon.com"
+		}
 	}
 ]
