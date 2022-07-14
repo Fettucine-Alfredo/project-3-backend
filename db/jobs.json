@@ -1,0 +1,80 @@
+[
+	{
+		"company": {
+			"name": "Fake INC"
+		},
+		"title": "Fake Job",
+		"url": "https://fakejob.com",
+		"skills": [
+			"CSS",
+			"HTML",
+			"JavaScript",
+			"React",
+			"Node",
+			"Python",
+			"Express"
+		],
+		"contacts": [
+			{
+				"name": "Bob",
+				"email": "bob@fakeinc.com"
+			},
+			{
+				"name": "Linda",
+				"email": "linda@fakeinc.com"
+			}
+		]
+	},
+	{
+		"company": {
+			"name": "Google"
+		},
+		"title": "Senior Software Engineer",
+		"url": "https://google.com",
+		"skills": ["Node", "React", "Express", "MondoDB"],
+		"contacts": [
+			{
+				"name": "Bill",
+				"email": "BillGates@microsoft.com"
+			}
+		]
+	},
+	{
+		"company": {
+			"name": "FaceBook"
+		},
+		"title": "Junior FrontEnd Developer",
+		"url": "https://facebook.com",
+		"description": "We're looking for a junior developer that has 500 years of experience in JavaScript, React, React Redux, Gatsby, Express, MongoDB, Mongoose, Python, C++, C#, HTML, CSS, and every other framework/library ever written",
+		"skills": ["Node", "React", "Express", "MondoDB"],
+		"contacts": [
+			{
+				"name": "Mark Zuckerburger",
+				"email": "mark@facebook.com"
+			},
+			{
+				"name": "Steve",
+				"email": "steve@facebook.com"
+			}
+		]
+	},
+	{
+		"company": {
+			"name": "Amazon"
+		},
+		"title": "Backend Engineer",
+		"url": "https://amazon.com",
+		"description": "Work with the best of the best. We want a dedicated employee that will commit all their time to our projects. This means you might have to pee in a bottle at your desk.",
+		"skills": ["React", "Node", "Express", "MongoDB", "Mongoose"],
+		"contacts": [
+			{
+				"name": "Jeff Bezos",
+				"email": "Jeff@amazon.com"
+			},
+			{
+				"name": "Doloris",
+				"email": "Doloris@amazon.com"
+			}
+		]
+	}
+]

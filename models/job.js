@@ -13,7 +13,7 @@ const jobSchema = new mongoose.Schema(
 		skills: [String],
 		contacts: [
 			{
-				name: { type: String, required: true },
+				name: String,
 				email: String,
 				phone: String,
 			},
