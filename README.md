@@ -41,3 +41,9 @@ This is the backend for [Trakr](https://github.com/Fettucine-Alfredo/trakr) whic
 		},
 	}
 ```
+## API Endpoints
+    - GET: api/user/:username
+    - GET: api/user/:username/jobs/:id
+    - POST: api/user/:username/jobs
+    - PATCH: api/user/:username/jobs/:id
+    - DELETE: api/user/:username/jobs/:id
